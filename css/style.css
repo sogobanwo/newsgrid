@@ -1,0 +1,345 @@
+:root{
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --dark-color: #333;
+  --light-color: #ddd;
+  --ent-color:#a66bbe;
+  --tech-color:#009cff;
+  --max-width: 1100px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav{
+  background: white;
+  padding: 0 10rem;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+}
+body{
+  background: var(--light-color);
+  font-size: 10px;
+  font-family: sans-serif;
+  overflow: auto; 
+ 
+}
+.logo{
+  width: 20rem;
+}
+a{
+  text-decoration: none;
+  color: var(--dark-color);
+  font-size: 1rem;
+}
+ul{
+  list-style: none;
+  display: flex; 
+  padding: 1rem;
+}
+ul li a{
+  padding: .5rem;
+  background: var(--light-color);
+  margin: .2rem;
+}
+ul li:hover a{
+  background: var(--primary-color);
+  color: #ddd;
+}
+ul li .now{
+  background: var(--primary-color);
+  color: #ddd;
+}
+.container{
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; 
+}
+.container > div{
+  padding: 1rem;
+  justify-self: center;
+}
+div > a{
+  padding: .5rem;
+}
+.normal-showcase{
+  background: #111;
+  color: #fff;
+  height: 50vh;
+  position: relative;
+  padding: 0 2rem;
+}
+.normal-showcase::before{
+  content: '';
+  background: url(/image_resources/featured.jpg) no-repeat center center/cover;
+  opacity: .4;
+  position: absolute;
+  height:100%;
+  width: 100%;
+  top: 0;
+  left: 0%;
+}
+.showcase-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+.showcase-content{
+  z-index: 1;
+}
+.showcase-content h3{
+  background: var(--secondary-color);
+  display: inline-block;
+  padding: .3rem .5rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+.showcase-content h1 {
+  margin-bottom: .2rem;
+}
+.showcase-content p{
+  margin-bottom: 2rem;
+}
+.showcase-content a{
+  background: var(--primary-color);
+  color: white;
+  border-radius: 2px;
+}
+.showcase-content a:hover{
+  opacity: .9;
+}
+.card{
+  background: white;
+  padding: 1rem .5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.grid-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+.grid-div > *:first-child{
+  display: grid;
+  grid-gap: 1rem;
+  align-items: center;
+  grid-column: 1/ span 2;
+}
+.article-section{
+  margin: 0 10rem;
+}
+.grid-div > *:last-child{
+  display: grid;
+  grid-gap: 1rem;
+  align-items: center;
+  grid-column: 2/ span 2;
+}
+.article-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.article-div2{
+  display: grid;
+  grid-template-rows: 1fr 1fr ;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.grid-div > *:nth-child(2){
+  background: var(--dark-color);
+  color: white;
+}
+.grid-div > *:nth-child(6){
+  background: var(--primary-color);
+  color: white;
+}
+#sport{
+  background: var(--secondary-color);
+  display: inline-block;
+  padding: .3rem .5rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+#ent{
+  background: var(--ent-color);
+  display: inline-block;
+  padding: .3rem .5rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+#tech{
+  background: var(--tech-color);
+  display: inline-block;
+  padding: .3rem .5rem;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+.card h2{
+  padding-bottom: 2rem;
+}
+.card p{
+  padding-bottom: 2rem;
+}
+.article-section h2{
+  font-size: 1.5rem;
+  padding-bottom: 0;
+}
+.article-section > h2{
+  padding: 1rem 1rem 0 1rem;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 3rem 10rem;
+  background: var(--dark-color);
+  grid-column-gap: 1rem;
+  color: white;
+}
+footer > *:last-child{
+  display: grid;
+  grid-column: 1/ span 4;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+  padding: .5rem 0;
+  font-size: 1rem;
+  margin: 3rem 0 0 0;
+}
+footer div div img{
+  width: 150px;
+  margin-bottom: 1rem;
+}
+footer a{
+  color: white;
+  display:block;
+  padding: .5rem 0;
+}
+footer > *:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+footer > *:nth-child(2) >h2,
+footer > *:nth-child(2) >p,
+footer > *:nth-child(2) > input{
+  display: block;
+  width: 90%;
+}
+footer > *:nth-child(2) >p,
+footer > *:nth-child(2) > input{
+  padding: .5rem;
+  margin-bottom: .3rem;
+}
+footer > *:nth-child(2) > input[type="submit"]{
+  background: var(--primary-color);
+  color: white;
+  border-radius: 2px;
+}
+footer > *:nth-child(2) > input[type="submit"]:hover{
+  opacity: .8;
+}
+footer > *:nth-child(4) > h2,
+footer > *:nth-child(4) > p,
+footer > *:nth-child(4) > a{
+  padding-bottom: 1rem;
+}
+footer > *:nth-child(4) > a{
+background: var(--secondary-color);
+text-align: center;
+}
+footer > *:nth-child(4) > a:hover{
+  opacity: .8;
+}
+.middle{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 1rem 10rem;
+  grid-gap: 1rem;
+} 
+.middle-1{
+  background: white;
+  padding: 1rem;
+  grid-row: 1/ span 3;
+}
+.middle-2{
+  background: var(--primary-color);
+  padding: 1rem;
+}
+.middle-1 h1,
+.middle-1 p{
+  padding: .5rem;
+}
+.middle-2 h2,
+.middle-2 p{
+  padding-bottom: 1rem;
+}
+.middle-2 a{
+  background: var(--dark-color);
+  color: white;
+  padding: .5rem ;
+  margin-top: 1rem;
+  text-align: center;
+  display: block;
+}
+.middle-2 a:hover{
+  opacity: .9;
+}
+.middle-1 > h1{
+  font-size: 1.5rem;
+
+}
+.middle > .card{
+  background: white;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  align-items: left;
+  justify-content: left;
+}
+.middle > .card > h2{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.middle .card ul{
+  display: flex;
+  flex-direction: column;
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-items: left;
+  justify-content: left;
+}
+.middle .card ul li{
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+  padding-left: 0;
+  background: none;
+}
+.middle .card > ul > li >a{
+  background: none;
+  border-bottom: 1px dotted;
+}
+.middle .card > ul > li >a:hover{
+  color: var(--primary-color);
+}
+small{
+  background: var(--light-color);
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
